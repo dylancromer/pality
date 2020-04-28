@@ -15,7 +15,7 @@ def describe_Pca():
 
     def it_constructs_the_pcs_of_some_data(test_data):
         pca = pality.Pca.calculate(test_data)
-        assert np.allclose(np.abs(pca.weights), np.array([[0.5, 0.5], [0.5, 0.5]]))
+        assert np.allclose(np.abs(pca.weights), np.array([[1, 1], [1, 1]]))
 
     def describe_svd():
 
@@ -49,7 +49,7 @@ def describe_Pca():
 
             weights = pality.Pca.weights_from_svd(v)
 
-            assert np.all(weights == v/np.sqrt(10))
+            assert np.all(weights == v*np.sqrt(10))
 
     def describe_explained_var_from_s():
 

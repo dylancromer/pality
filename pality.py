@@ -46,7 +46,7 @@ class Pca:
     @staticmethod
     def weights_from_svd(v):
         n_samps = v.shape[0]
-        return v / np.sqrt(n_samps)
+        return v * np.sqrt(n_samps)
 
     @staticmethod
     def explained_var_from_s(s, n_samples):
