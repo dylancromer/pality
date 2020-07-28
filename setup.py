@@ -1,7 +1,4 @@
 from distutils.core import setup
-import numpy
-
-
 
 
 setup(name='pality',
